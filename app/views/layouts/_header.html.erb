@@ -1,0 +1,23 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" id="full-header">
+<div class="container">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">BRIT+CO</a>
+  </div>
+  <% if user_signed_in? %>
+    <ul class="nav navbar-nav navbar-right">
+      <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete  %></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <%= gravatar_for current_user, class: "gravatar" if user_signed_in? %>
+    </ul>
+  <% else %>
+    <%= render "shared/login_form" %>
+  <% end %>
+</div>
+</nav>
