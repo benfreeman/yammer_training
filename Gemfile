@@ -16,6 +16,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'bcrypt', '~> 3.1.7'
 gem 'unicorn'
+gem "figaro"
 
 group :production do
   gem 'rails_12factor', '0.0.2'
