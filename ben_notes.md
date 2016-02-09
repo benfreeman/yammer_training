@@ -5,5 +5,8 @@ Git
 Github/Bitbucket
 Heroku
   heroku rename yam-benfreeman
+  git push heroku master
+  heroku run rake db:migrate
   http://stackoverflow.com/questions/21544626/how-do-you-manage-secret-keys-and-heroku-with-ruby-on-rails-4-1-0beta1/22458102#22458102
+  https://github.com/laserlemon/figaro
 pg vs sqlite
