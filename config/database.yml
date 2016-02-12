@@ -15,6 +15,9 @@ default: &default
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 # p
+test:
+  <<: *default
+  database: yammer_training_test
 
 development:
   <<: *default
