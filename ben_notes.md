@@ -24,4 +24,5 @@ try to get /help routing to your static pages help page
 lots of tests failing:
 https://github.com/plataformatec/devise#test-helpers
 
+Chapter 4
 
