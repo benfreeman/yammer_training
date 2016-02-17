@@ -12,11 +12,13 @@ class ArticlesControllerTest < ActionController::TestCase
   end
 
   test "should get new" do
+    sign_in @user
     get :new
     assert_response :success
   end
 
   test "should create article" do
+    sign_in @user
     assert_difference('Article.count') do
       post :create, article: {  }
     end
@@ -30,16 +32,19 @@ class ArticlesControllerTest < ActionController::TestCase
   end
 
   test "should get edit" do
+    sign_in @user
     get :edit, id: @article
     assert_response :success
   end
 
   test "should update article" do
+    sign_in @user
     patch :update, id: @article, article: {  }
     assert_redirected_to article_path(assigns(:article))
   end
 
   test "should destroy article" do
+    sign_in @user
     assert_difference('Article.count', -1) do
       delete :destroy, id: @article
     end
