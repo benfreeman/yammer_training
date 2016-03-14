@@ -3,6 +3,7 @@ require 'test_helper'
 class ArticlesControllerTest < ActionController::TestCase
   setup do
     @article = articles(:one)
+    @user = users(:one)
   end
 
   test "should get index" do
@@ -20,7 +21,7 @@ class ArticlesControllerTest < ActionController::TestCase
   test "should create article" do
     sign_in @user
     assert_difference('Article.count') do
-      post :create, article: {  }
+      post :create, article: { body: @article.body, name: @article.name }
     end
 
     assert_redirected_to article_path(assigns(:article))
@@ -39,7 +40,7 @@ class ArticlesControllerTest < ActionController::TestCase
 
   test "should update article" do
     sign_in @user
-    patch :update, id: @article, article: {  }
+    patch :update, id: @article, article: { title: "NEW TITLE" }
     assert_redirected_to article_path(assigns(:article))
   end
 

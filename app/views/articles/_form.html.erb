@@ -11,6 +11,16 @@
     </div>
   <% end %>
 
+  <div class="field form-group">
+    <%= f.label :title %><br>
+    <%= f.text_field :name, autocomplete: "off", placeholder: "title" %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :body %><br>
+    <%= f.text_field :body, autocomplete: "off", placeholder: "body" %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

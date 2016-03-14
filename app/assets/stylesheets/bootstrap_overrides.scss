@@ -1,15 +1,28 @@
 body {
-  padding-top: 50px;
+  padding-top: 60px;
   font-size: 17px;
   color: #525252;
 }
 
-/* Footer */
+/* universal */
 
-#full-footer {
-  background-color: black;
-  border-top: solid 3px #428bca;
+section {
+  overflow: auto;
 }
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* Header */
 
 #full-header {
   background-color: black;
@@ -26,4 +39,56 @@ body {
   width: auto;
   padding-right: 5px;
   vertical-align: middle;
+}
+
+#article_title {
+}
+
+#article_body {
+  padding-top: 10px;
+}
+
+#edit_article_button {
+  color: white;
+}
+
+#edit_user_button {
+  font-size: 12px;
+  margin-left: 5px;
+  margin-right: 5px;
+  &:visited {
+    color: white;
+  }
+}
+
+#delete_user_button {
+  font-size: 12px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: white;
+  &:visited {
+    color: white;
+  }
+}
+
+#show_user_link {
+  &:hover {
+    color: white;
+    background-color: white;
+    text-decoration: none;
+  }
+  &:visited {
+    color: #337ab7;
+  }
+}
+
+#all_users_table {
+  margin-top: 50px;
+}
+
+/* Footer */
+
+#full-footer {
+  background-color: black;
+  border-top: solid 3px #428bca;
 }

@@ -12,6 +12,10 @@ class User < ActiveRecord::Base
   before_save :concat_full_name
 
   def concat_full_name
-    self.first_name + self.last_name
+    self.full_name = self.first_name + ' ' + self.last_name
+  end
+
+  def self.admin?
+    self.admin
   end
 end

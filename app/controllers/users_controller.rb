@@ -5,8 +5,10 @@ class UsersController < ApplicationController
   respond_to :html
 
   def index
-    @users = User.all
-    respond_with(@users)
+    if @user.admin?
+      @users = User.all
+      respond_with(@users)
+    end
   end
 
   def show
@@ -19,6 +21,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+
   end
 
   def create

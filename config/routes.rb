@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'static_pages#home'
+  root 'articles#index'
   get 'static_pages/home'
   get 'help' => 'static_pages#help', as: :help
   get 'about' => 'static_pages#about', as: :about

@@ -1,4 +1,4 @@
-Chapter 1
+Chapter 1 From zero to deploy
 Unix Commands
 IDE
 Git
@@ -13,16 +13,37 @@ pg vs sqlite
 routes
 rest / crud
 
-Chapter 2
+Chapter 2 - A Toy App
 validations
 associations
 migrations
+OOP
+Classes - a blueprint for a thing
+Inheritance
 
-Chapter 3
+Chapter 3 - Mostly static pages
 static pages
 try to get /help routing to your static pages help page
+yield
 lots of tests failing:
 https://github.com/plataformatec/devise#test-helpers
+fixtures
 
-Chapter 4
+Chapter 4 - Rails-flavored Ruby
+ruby the language.
+parens on methods are optional
+symbols
+hashes
+helpers
+optional method arguments
+modules - collection of useful methods
+string concatenation
+method chaining
+arrays
 
+Chapter 5 - Filling in the layout
+bootstrap
+css
+html
+sass - nexting and variables
+integration tests on the layout
