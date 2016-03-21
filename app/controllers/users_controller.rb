@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   respond_to :html
 
   def index
-    if @user.admin?
+    if current_user.admin?
       @users = User.all
       respond_with(@users)
     end

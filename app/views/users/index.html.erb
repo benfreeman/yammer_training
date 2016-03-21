@@ -1,5 +1,9 @@
+
 <p id="notice"><%= notice %></p>
 
+<% if !current_user.admin? %>
+  <%= flash[:error] = "You must be an admin to see this page" %>
+<% else %>
 <div class="panel panel-default" id="all_users_table">
   <div class="panel-heading center"><h4>All Users</h4></div>
 
@@ -21,10 +25,12 @@
           <td class="center"><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, :id => "delete_user_button", :class => "btn btn-danger", role: "button" %></td>
           <% if user.admin? %>
             <td class="center"> Yes </td>
+          <% else %>
+            <td class="center"> No </td>
           <% end %>
         </tr>
       <% end %>
     </tbody>
   </table>
 </div>
-
+<% end %>
