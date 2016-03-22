@@ -5,9 +5,14 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :articles
-  validates :first_name, :last_name, :email,  presence: true
-  validates :email, confirmation: true
-  validates :email, uniqueness: true
+
+  before_save { self.email = email.downcase }
+  validates :first_name, :last_name, presence: true
+  validates :password, presence: true, length: { minimum: 6 }
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :email, presence: true, length: { maximum: 255 },
+                    format: { with: VALID_EMAIL_REGEX },
+                    uniqueness: { case_sensitive: false }
 
   before_save :concat_full_name
 

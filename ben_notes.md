@@ -47,3 +47,9 @@ css
 html
 sass - nexting and variables
 integration tests on the layout
+
+Chapter 6 - Modeling users
+working with User model at rails c
+more validations
+database indexes and constraints (db level validations)
+
