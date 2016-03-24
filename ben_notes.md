@@ -53,3 +53,9 @@ working with User model at rails c
 more validations
 database indexes and constraints (db level validations)
 
+Chapter 7 - Sign up
+how routes/rest endpoints map to views/controllers/actions
+gravatar
+debugger/byebug
+sign_up form
+

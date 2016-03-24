@@ -5,7 +5,7 @@
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= devise_error_messages! %>
 
-      <div class="field">
+      <div class="field login_form">
         <%= f.text_field :first_name, autofocus: true, placeholder: "First Name" %>
       </div>
 
@@ -15,10 +15,6 @@
 
       <div class="field">
         <%= f.email_field :email, placeholder: "Email Address" %>
-      </div>
-
-      <div class="field">
-        <%= f.email_field :email_confirmation, placeholder: "Confirm Email Address" %>
       </div>
 
       <div class="field">
